@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>HMTools.MVVMLibrary</PackageId>
+    <Authors>HMTools</Authors>
+    <Description>MVVM Architecture Library</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/HMTools/MVVMLibrary</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HMTools/MVVMLibrary</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

@@ -10,19 +10,6 @@ namespace MVVMLibrary.Models
 {
     public class BaseModel : INotifyPropertyChanged, INotifyDataErrorInfo
     {
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string name = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-        #endregion
-
-        #region Fields
-        public int id { get; set; }
-        #endregion
-
         #region INotifyDataErrorInfo
         private readonly Dictionary<string, List<string>> _errorsByPropertyName = new Dictionary<string, List<string>>();
 
@@ -77,6 +64,17 @@ namespace MVVMLibrary.Models
                 OnErrorsChanged(propertyName);
             }
         }
+        #endregion
+        #region INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+        #endregion
+        #region Properties
+        public int Id { get; set; }
         #endregion
     }
 }
