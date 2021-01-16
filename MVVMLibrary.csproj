@@ -8,10 +8,15 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/HMTools/MVVMLibrary</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HMTools/MVVMLibrary</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HMTools.WPFLibrary" Version="1.1.0" />
   </ItemGroup>
 
 </Project>
