@@ -22,6 +22,13 @@ namespace MVVMLibrary.ViewModels
         }
         #endregion
 
+        #region Constructors
+        public BaseExpandableViewModel (bool startExpanded = false)
+	    {
+            IsExpanded = startExpanded;
+	    }
+	    #endregion
+
         #region Methods
         protected override void AddCommands()
         {

@@ -14,7 +14,7 @@ namespace MVVMLibrary.ViewModels
 
         #region Properties
 
-        private bool isShown = false;
+        private bool isShown;
         public bool IsShown
         {
             get { return isShown; }
@@ -47,10 +47,11 @@ namespace MVVMLibrary.ViewModels
         #endregion
 
         #region Constructors
-        public BaseGridColumnViewModel(int columnMinWidth, GridLength columnWidth)
+        public BaseGridColumnViewModel(int columnMinWidth, GridLength columnWidth, bool startShown = true)
         {
             colMinWidth = columnMinWidth;
             ColWidth = columnWidth;
+            IsShown = startShown;
         }
         #endregion
 
