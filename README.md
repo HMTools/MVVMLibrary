@@ -16,4 +16,4 @@ Install-Package HMTools.MVVMLibrary
 ```
 
 ## UML Diagram
-![](./ReadmeResources/MVVMLibraryUML.svg?raw=1)
+![](./ReadmeResources/MVVMLibraryUML2.svg?raw=1)
