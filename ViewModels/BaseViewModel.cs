@@ -17,12 +17,19 @@ namespace MVVMLibrary.ViewModels
         protected void NotifyPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+            if (autoRefreshCommands)
+                RefreshCommands();
         }
         #endregion
 
+        #region Fields
+        private readonly bool autoRefreshCommands = false;
+        #endregion
+
         #region Constructors
-        public BaseViewModel()
+        public BaseViewModel(bool autoRefreshCommands = false)
         {
+            this.autoRefreshCommands = autoRefreshCommands;
             AddCommands();
         }
         #endregion
@@ -60,6 +67,13 @@ namespace MVVMLibrary.ViewModels
                             NotifyPropertyChanged(name);
                 };
             }
+        }
+        protected void RefreshCommands()
+        {
+            System.Windows.Application.Current.Dispatcher.Invoke(() => 
+            {
+                System.Windows.Input.CommandManager.InvalidateRequerySuggested();
+            });
         }
         #endregion
     }
