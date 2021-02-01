@@ -47,7 +47,7 @@ namespace MVVMLibrary.ViewModels
         #endregion
 
         #region Constructors
-        public BaseGridColumnViewModel(int columnMinWidth, GridLength columnWidth, bool startShown = true)
+        public BaseGridColumnViewModel(int columnMinWidth, GridLength columnWidth, bool startShown = true, bool autoRefershCommands = false) : base(autoRefershCommands)
         {
             colMinWidth = columnMinWidth;
             ColWidth = columnWidth;

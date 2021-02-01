@@ -23,7 +23,7 @@ namespace MVVMLibrary.ViewModels
         #endregion
 
         #region Constructors
-        public BaseExpandableViewModel (bool startExpanded = false)
+        public BaseExpandableViewModel (bool startExpanded = false, bool autoRefershCommands = false) : base(autoRefershCommands)
 	    {
             IsExpanded = startExpanded;
 	    }
