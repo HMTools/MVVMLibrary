@@ -15,9 +15,9 @@ namespace MVVMLibrary.Models
         #endregion
 
         #region Methods
-        public void Changed()
+        public void Changed(bool status = true)
         {
-            isChanged = true;
+            isChanged = status;
         }
         public bool GetChangedStatus()
         {
