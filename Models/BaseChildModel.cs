@@ -9,5 +9,20 @@ namespace MVVMLibrary.Models
         #region Properties
         public int ParentId { get; set; }
         #endregion
+
+        #region Fields
+        private bool isChanged = false;
+        #endregion
+
+        #region Methods
+        public void Changed()
+        {
+            isChanged = true;
+        }
+        public bool GetChangedStatus()
+        {
+            return isChanged;
+        }
+        #endregion
     }
 }
