@@ -27,5 +27,12 @@ namespace MVVMLibrary.Wrappers
 	    }
 
         #endregion
+
+        #region Constructors
+        public StringWrapper(string val = "")
+        {
+            Value = val;
+        }
+        #endregion
     }
 }
