@@ -34,5 +34,15 @@ namespace MVVMLibrary.Wrappers
             Value = val;
         }
         #endregion
+
+        #region Methods
+        public static List<string> GetValues(IEnumerable<StringWrapper> wrappers)
+        {
+            List<string> output = new List<string>();
+            foreach (var wrapper in wrappers)
+                output.Add(wrapper.Value);
+            return output;
+        }
+        #endregion
     }
 }
